@@ -1,0 +1,18 @@
+.nav_item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 3.5px;
+    bottom: 0;
+    left: 0;
+    background: #7322ec;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav_item:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

@@ -23,6 +23,8 @@
             "$utils@*": ["./src/utils/*"],
             "$asset@*": ["./src/assets/*"],
             "$style@*": ["./src/styles/*"],
+            "$icon@*": ["./src/icons/*"],
+            "$data@*": ["./src/data/*"],
             "$*": ["./src/*"]
         }
     },

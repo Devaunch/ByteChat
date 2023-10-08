@@ -1,6 +1,7 @@
 import "$style@globals.css";
 import type { Metadata } from "next";
-import { poppins } from "$utils@fonts.ts";
+import { poppins } from "$utils@fonts";
+import navVariants from "$component@nav";
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={poppins.className}>{children}</body>
+            <body className={poppins.className}>
+                <navVariants.navbar />
+                {children}
+            </body>
         </html>
     );
 }
