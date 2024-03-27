@@ -12,3 +12,38 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model User{
+  id String @id @default(uuid())
+  name String
+  email String @unique
+  DOB DateTime
+  languages Languages
+  avatarImg String?
+  followersId String[]
+  followers User[] @relation("Followers")
+  following User[] @relation("Followers")
+  gender Gender
+  OAuth Boolean 
+  created DateTime @default(now())
+  updated DateTime @default(now())
+}
+
+enum Gender {
+  Male
+  Female
+  Other
+}
+
+enum Languages{
+  JS
+  PYTHON
+  PHP
+  RUBY
+  RUST
+  SWIFT
+  C
+  CPP
+  OTHER
+}
