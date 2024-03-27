@@ -13,7 +13,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'$components/*': './src/lib/components/*',
-			'$utils/*': './src/lib/utils/*'
+			'$utils/*': './src/lib/utils/*',
+			"$assets/*": "./src/lib/assets/*",
 		}
 	}
 };
