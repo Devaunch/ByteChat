@@ -5,29 +5,30 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
-
-model User{
-  id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  name String
-  email String @unique
-  DOB DateTime
-  languages Languages
-  avatarImg String?
+model User {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String
+  email       String    @unique
+  DOB         DateTime
+  languages   Languages
+  avatarImg   String?
   followersId String[]
-  followers User[] @relation("Followers")
-  following User[] @relation("Followers")
-  gender Gender
-  OAuth Boolean
-  created DateTime @default(now())
-  updated DateTime @default(now())
+  followers   User[]    @relation("Followers")
+  following   User[]    @relation("Followers")
+  gender      Gender
+  OAuth       Boolean
+  created     DateTime  @default(now())
+  updated     DateTime  @default(now())
 }
 
 enum Gender {
@@ -36,7 +37,7 @@ enum Gender {
   Other
 }
 
-enum Languages{
+enum Languages {
   JS
   PYTHON
   PHP

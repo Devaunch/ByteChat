@@ -1,13 +1,11 @@
 <script lang="ts">
 	const rows = new Array(80).fill(1);
-	console.log(rows)
 	const cols = new Array(75).fill(1);
 	let initialColor = 'rgba(0,0,0,0)';
 
 	let colors = [
 		'--sky-300',
 		'--pink-300',
-		'--green-300',
 		'--yellow-300',
 		'--red-300',
 		'--purple-300',
