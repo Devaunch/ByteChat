@@ -21,7 +21,7 @@
 </script>
 
 <div
-	class="absolute top-0 left-0 bg-primary-light dark:bg-primary-dark h-1 z-50"
+	class="absolute top-0 left-0 bg-primary-500 h-0.5 z-50"
 	style="width: {$styles}%;"
 	bind:this={div}
 />
