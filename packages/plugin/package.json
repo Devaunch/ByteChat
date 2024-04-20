@@ -1,0 +1,13 @@
+{
+    "name": "@repo/tailwindcss-plugin",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mini-svg-data-uri": "^1.4.4",
+        "tailwindcss": "^3.4.3"
+    }
+}

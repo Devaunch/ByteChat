@@ -1,2 +1,7 @@
-<h1>Web</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+    import AuthBg from "$lib/components/AuthBg.svelte";
+</script>
+
+<main class="min-h-screen w-full">
+    <AuthBg />
+</main>
